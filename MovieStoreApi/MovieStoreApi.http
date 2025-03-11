@@ -1,0 +1,43 @@
+@MovieStoreApi_HostAddress = http://localhost:5086
+
+GET {{MovieStoreApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{MovieStoreApi_HostAddress}}/books/GetAllBooks
+Accept: application/json
+
+###
+
+GET {{MovieStoreApi_HostAddress}}/books/GetBookById?id=1
+Accept: application/json
+
+###
+
+POST {{MovieStoreApi_HostAddress}}/books/AddBook/
+Content-Type: application/json
+
+{
+    "id": 1,
+    "title": "test book",
+    "authorname": "test author",
+    "price": 1.25
+}
+
+###
+
+PUT {{MovieStoreApi_HostAddress}}/books/UpdateBook
+Content-Type: application/json
+
+{
+    "id": 2,
+    "title": "test book 3",
+    "authorname": "test author 3",
+    "price": 1.50
+}
+
+###
+
+DELETE {{MovieStoreApi_HostAddress}}/books/RemoveBook?id=2
+Accept: application/json
