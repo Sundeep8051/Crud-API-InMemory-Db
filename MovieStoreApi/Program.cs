@@ -1,3 +1,4 @@
+using MovieStoreApi.Middlewares;
 using MovieStoreApi.ServiceInjections;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +20,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseRequestIntercetor();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
